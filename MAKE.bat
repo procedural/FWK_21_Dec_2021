@@ -4,7 +4,7 @@
 cd `dirname $0`
 
 # copy demos to root folder. local changes are preserved
-cp demos/*.c . -n
+cp -n demos/*.c .
 
 if [ "$1" = "tidy" ]; then
     rm demo_* 2> /dev/null
