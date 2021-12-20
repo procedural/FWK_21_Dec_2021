@@ -3,8 +3,9 @@
 # linux + osx -----------------------------------------------------------------
 cd `dirname $0`
 
-git clone https://github.com/assimp/assimp && cd assimp
-cmake -DCMAKE_BUILD_TYPE=Release .
+git clone https://github.com/assimp/assimp
+cd assimp
+cmake -DCMAKE_BUILD_TYPE=Release . -DASSIMP_BUILD_TESTS=OFF
 make -j 8
 cp bin/libassimp.so ../libassimp.so
 cp bin/libassimp.so ../libassimp.so.5
